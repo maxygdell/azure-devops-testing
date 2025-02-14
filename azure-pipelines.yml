@@ -17,25 +17,7 @@ steps:
       pip install --upgrade robotframework-seleniumlibrary 
     displayName: 'Install Python dependencies'
 
-  # 3. (Optional) Install a browser if not already available.
-  - script: |
-      sudo apt-get update
-      sudo apt-get install -y chromium-browser
-    displayName: 'Install Chromium Browser'
-
-  # 4. Start the local web server from the "website" folder.
-  - script: |
-      cd website
-      nohup python -m http.server 8000 &
-      sleep 5  # Give the server time to start
-    displayName: 'Start Local Website'
-
-  # 5. Run the Robot Framework tests.
+  # 3. Run the Robot Framework tests.
   - script: |
       robot tests.robot
     displayName: 'Run Robot Framework Tests'
-
-  # 6. Cleanup: Stop the local web server.
-  - script: |
-      pkill -f "python -m http.server"
-    displayName: 'Stop Local Website'
