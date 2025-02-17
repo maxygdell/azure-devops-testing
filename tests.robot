@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation    This tests the thing
 Library    SeleniumLibrary
 
 *** Variables ***
