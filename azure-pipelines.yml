@@ -13,7 +13,6 @@ steps:
 
   # 2. Install dependencies (Robot Framework and Selenium)
   - script: |
-      python -m pip install --upgrade pip
       pip install --upgrade robotframework-seleniumlibrary 
     displayName: 'Install Python dependencies'
 
