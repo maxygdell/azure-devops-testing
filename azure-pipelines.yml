@@ -12,5 +12,5 @@ steps:
 
   # 2. Run the Robot Framework tests.
   - script: |
-      robot tests.robot
+      robot  --output output.xml --log log.html --report report.html tests.robot
     displayName: 'Run Robot Framework Tests'
