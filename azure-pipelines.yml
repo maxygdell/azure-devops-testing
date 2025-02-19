@@ -5,19 +5,19 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  # 1. Install dependencies (Robot Framework and Selenium)
+  # 1. Install dependencies (Robot Framework, Selenium Library)
   - script: |
       pip install --upgrade robotframework-seleniumlibrary 
-    displayName: 'Install Python dependencies'
+    displayName: 'Install Robot Framework and dependencies'
 
   # 2. Run the Robot Framework tests.
   - script: |
-      robot  --output output.xml --log log.html --report report.html tests.robot
+      robot --output test_results/output.xml --log test_results/log.html --report test_results/report.html tests.robot
     displayName: 'Run Robot Framework Tests'
-    
+
   # 3. Publish the Robot Framework reports as pipeline artifacts.
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(System.DefaultWorkingDirectory)'
+      targetPath: '$(System.DefaultWorkingDirectory)/test_results/'
       artifactName: 'robot-reports'
     displayName: 'Publish Robot Framework Reports'
