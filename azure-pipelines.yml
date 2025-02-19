@@ -5,18 +5,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  # 1. Set up Python environment
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '3.x'
-      addToPath: true
-
-  # 2. Install dependencies (Robot Framework and Selenium)
+  # 1. Install dependencies (Robot Framework and Selenium)
   - script: |
       pip install --upgrade robotframework-seleniumlibrary 
     displayName: 'Install Python dependencies'
 
-  # 3. Run the Robot Framework tests.
+  # 2. Run the Robot Framework tests.
   - script: |
       robot tests.robot
     displayName: 'Run Robot Framework Tests'
