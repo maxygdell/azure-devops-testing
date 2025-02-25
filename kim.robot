@@ -1,4 +1,4 @@
-#Alma, Therese & Kotaiba, Grupp 3
+#Taken from Alma, Therese & Kotaiba, Grupp 3
 
 *** Settings ***
 Library    SeleniumLibrary
