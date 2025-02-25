@@ -24,10 +24,10 @@ steps:
     inputs:
       targetPath: '$(System.DefaultWorkingDirectory)/test_results/'
       artifactName: 'robot-reports'
-    displayName: 'Publish Robot Framework Reports'
+    displayName: 'Publish Robot Framework Reports - Old Test'
 
   - task: PublishPipelineArtifact@2
     inputs:
       targetPath: '$(System.DefaultWorkingDirectory)/new_tests/test_results/'
-      artifactName: 'robot-reports'
-    displayName: 'Publish Robot Framework Reports'
+      artifactName: 'robot-reports-new-tests'
+    displayName: 'Publish Robot Framework Reports - New Test'
