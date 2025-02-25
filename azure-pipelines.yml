@@ -22,6 +22,6 @@ steps:
   # 3. Publish the Robot Framework reports as pipeline artifacts.
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(System.DefaultWorkingDirectory)/new_tests/test_results/'
+      targetPath: '$(System.DefaultWorkingDirectory)/test_results/'
       artifactName: 'robot-reports'
     displayName: 'Publish Robot Framework Reports'
