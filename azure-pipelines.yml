@@ -12,10 +12,6 @@ steps:
 
   # 2. Run the Robot Framework tests.
   - script: |
-      robot --output test_results/output.xml --log test_results/log.html --report test_results/report.html kim.robot
-    displayName: 'Run Original Kim Tests'
-
-  - script: |
       robot --output test_results/output_new_kim_test.xml --log test_results/log_new_kim_test.html --report test_results/report_new_kim_test.html new_tests/tests/kim.robot
     displayName: 'Run Refactored Kim Tests'
 
