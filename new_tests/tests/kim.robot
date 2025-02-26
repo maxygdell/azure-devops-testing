@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ${EXECDIR}/new_tests/resources/keywords.robot
+Resource    ${EXECDIR}/new_tests/resources/kim_keywords.robot
 
 *** Test Cases ***
 
