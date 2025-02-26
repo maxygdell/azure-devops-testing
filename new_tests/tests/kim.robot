@@ -2,9 +2,6 @@
 Library    SeleniumLibrary
 Resource    ${EXECDIR}/new_tests/resources/keywords.robot
 
-#Test Setup    Setup Browser For Use 
-#Test Teardown    Close Browser
-
 *** Test Cases ***
 
 Buying Tickets For The Family
