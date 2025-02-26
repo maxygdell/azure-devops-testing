@@ -119,3 +119,17 @@ Click Remove Ticket
     Click Element    //*[@id="cart-details"]/ul/li[1]/button
   
 
+# Keywords for Kim's tests using Gherkin
+I want to buy weekend tickets for a family of four
+    Sleep    1s
+
+I add the tickets to my cart
+    Buy 2 adult vip Tickets
+    Buy 2 child vip Tickets
+
+I should see the total price on the cart page
+    ${cart_page}=    Get Page Link    cart
+    Click Section    ${cart_page}
+    Sleep    2s
+    ${total_price}=    Get Cart Total
+    Should Be Equal    ${total_price}     320
