@@ -64,16 +64,18 @@ Buy ${amount} ${ticket_type} ${ticket_category} Tickets
     Click Button    Add to Cart    
 
 
-Book ${daytype} Safari 
+Book ${daytype} Safari
     ${safari_page}=    Get Page Link    book_safari
     ${cart_page}=    Get Page Link    cart    
     ${safari_date}=    Get Safari Elements    safari_date
     ${safari_type}=    Get Safari Elements    safari_type
-    ${date_today}=    Get Todays Date
+    ${booking_date}=    Get Date Type    ${daytype}    
     Click Section    ${safari_page}
     Sleep    3s
     Clear Element Text    id:${safari_date}
-    Input Text    ${safari_date}    ${date_today}
+
+    
+    Input Text    ${safari_date}    ${booking_date}
     Click Element    css:${safari_type}
     Click Button    css:#safari-form > button
     Handle Alert
