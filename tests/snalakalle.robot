@@ -1,6 +1,7 @@
 *** Settings ***
-Library    page_object_models/base_page.py
+Library    ${EXECDIR}/resources/page_object_models/BasePage.py
 
 *** Test Cases ***
-Use Custom Keywords
+Placeholder
+    Log    Hej!
     
