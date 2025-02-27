@@ -1,6 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ${EXECDIR}/new_tests/resources/kim_keywords.robot
+Resource    ${EXECDIR}/resources/kim_keywords.robot
+Test Setup    Setup Browser For Use
+Test Teardown    Close Browser
 
 *** Test Cases ***
 
@@ -15,11 +17,6 @@ Buying Safari Tickets For The Family
     Then I should be able to buy weekend safari tickets
     And see the total price in my cart
 
-Tests Completed
-    Close Browser
-    
-
-    
 
    
 

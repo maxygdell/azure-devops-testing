@@ -12,12 +12,12 @@ steps:
 
   # 2. Run the Robot Framework tests.
   - script: |
-      robot --output test_results/output_new_kim_test.xml --log test_results/log_new_kim_test.html --report test_results/report_new_kim_test.html new_tests/tests/kim.robot
-    displayName: 'Run Refactored Kim Tests'
+      robot --output tests/output_kim_test.xml --log test_results/log_kim_test.html --report test_results/report_kim_test.html tests/kim.robot
+    displayName: 'Run Kim Tests'
 
   # 3. Publish the Robot Framework reports as pipeline artifacts.
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(System.DefaultWorkingDirectory)/test_results/'
+      targetPath: '$(System.DefaultWorkingDirectory)/results/logs/'
       artifactName: 'robot-reports'
     displayName: 'Publish Robot Framework Reports'

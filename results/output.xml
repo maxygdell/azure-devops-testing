@@ -1,546 +1,809 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2025-02-26T10:39:12.583414" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2025-02-27T12:57:55.638861" rpa="false" schemaversion="5">
 <suite id="s1" name="Azure-Devops-Testing" source="C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing">
-<suite id="s1-s1" name="New Tests" source="C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing\new_tests">
-<suite id="s1-s1-s1" name="Tests" source="C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing\new_tests\tests">
-<suite id="s1-s1-s1-s1" name="Kim" source="C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing\new_tests\tests\kim.robot">
-<test id="s1-s1-s1-s1-t1" name="Buying Tickets For The Family" line="7">
-<kw name="Given I want to buy weekend tickets for a family of four" owner="kim_keywords">
-<kw name="Setup Browser For Use" owner="keywords">
+<suite id="s1-s1" name="Tests" source="C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing\tests">
+<suite id="s1-s1-s1" name="Kim" source="C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing\tests\kim.robot">
+<test id="s1-s1-s1-t1" name="Buying Tickets For The Family" line="9">
+<kw name="Setup Browser For Use" owner="keywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:12.845797" level="INFO">Opening browser 'headlesschrome' to base url 'file://C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing/website/jurap.html'.</msg>
+<msg time="2025-02-27T12:57:56.038693" level="INFO">Opening browser 'headlesschrome' to base url 'file://C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing/website/jurap.html'.</msg>
 <arg>url=${HTML_PATH}</arg>
 <arg>browser=headlesschrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-26T10:39:12.845797" elapsed="1.505865"/>
+<status status="PASS" start="2025-02-27T12:57:56.038693" elapsed="3.361264"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-26T10:39:14.351662" elapsed="0.043796"/>
+<status status="PASS" start="2025-02-27T12:57:59.399957" elapsed="0.037743"/>
 </kw>
 <kw name="Register User" owner="keywords">
 <kw name="Get Page Link" owner="BasePage">
-<msg time="2025-02-26T10:39:14.395458" level="INFO">${register_link} = register-nav</msg>
+<msg time="2025-02-27T12:57:59.438708" level="INFO">${register_link} = register-nav</msg>
 <var>${register_link}</var>
 <arg>register</arg>
-<status status="PASS" start="2025-02-26T10:39:14.395458" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:57:59.438708" elapsed="0.000991"/>
 </kw>
 <kw name="Click Section" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:14.395458" level="INFO">Clicking element 'id=register-nav'.</msg>
+<msg time="2025-02-27T12:57:59.441698" level="INFO">Clicking element 'id=register-nav'.</msg>
 <arg>id=${section_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:14.395458" elapsed="0.059419"/>
+<status status="PASS" start="2025-02-27T12:57:59.440699" elapsed="0.083532"/>
 </kw>
 <arg>${register_link}</arg>
-<status status="PASS" start="2025-02-26T10:39:14.395458" elapsed="0.059419"/>
+<status status="PASS" start="2025-02-27T12:57:59.439699" elapsed="0.084532"/>
 </kw>
 <kw name="Register Credentials" owner="keywords">
 <kw name="Get Register Element" owner="RegisterPage">
-<msg time="2025-02-26T10:39:14.455885" level="INFO">${username_element} = reg-username</msg>
+<msg time="2025-02-27T12:57:59.525229" level="INFO">${username_element} = reg-username</msg>
 <var>${username_element}</var>
 <arg>username_field</arg>
-<status status="PASS" start="2025-02-26T10:39:14.455885" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:57:59.525229" elapsed="0.000000"/>
 </kw>
 <kw name="Get Register Element" owner="RegisterPage">
-<msg time="2025-02-26T10:39:14.455885" level="INFO">${password_element} = reg-password</msg>
+<msg time="2025-02-27T12:57:59.526229" level="INFO">${password_element} = reg-password</msg>
 <var>${password_element}</var>
 <arg>password_field</arg>
-<status status="PASS" start="2025-02-26T10:39:14.455885" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:57:59.526229" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:14.456884" level="INFO">Typing text 'test' into text field 'id=reg-username'.</msg>
+<msg time="2025-02-27T12:57:59.527229" level="INFO">Typing text 'test' into text field 'id=reg-username'.</msg>
 <arg>id=${username_element}</arg>
 <arg>test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:14.456884" elapsed="0.091086"/>
+<status status="PASS" start="2025-02-27T12:57:59.526229" elapsed="0.121722"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:14.548965" level="INFO">Typing text 'test12344321' into text field 'id=reg-password'.</msg>
+<msg time="2025-02-27T12:57:59.647951" level="INFO">Typing text 'test12344321' into text field 'id=reg-password'.</msg>
 <arg>id=${password_element}</arg>
 <arg>test12344321</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:14.547970" elapsed="0.067947"/>
+<status status="PASS" start="2025-02-27T12:57:59.647951" elapsed="0.058970"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:14.616917" level="INFO">Clicking button 'Register'.</msg>
+<msg time="2025-02-27T12:57:59.707920" level="INFO">Clicking button 'Register'.</msg>
 <arg>Register</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:14.616917" elapsed="0.077830"/>
+<status status="PASS" start="2025-02-27T12:57:59.706921" elapsed="0.055208"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:14.454877" elapsed="0.239870"/>
+<status status="PASS" start="2025-02-27T12:57:59.524231" elapsed="0.237898"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:14.395458" elapsed="0.299289"/>
+<status status="PASS" start="2025-02-27T12:57:59.437700" elapsed="0.324429"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T10:39:16.696399" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-02-27T12:58:01.762775" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T10:39:14.694747" elapsed="2.001652"/>
+<status status="PASS" start="2025-02-27T12:57:59.762129" elapsed="2.000646"/>
 </kw>
 <kw name="Login To Page" owner="keywords">
 <kw name="Get Login Element" owner="LoginPage">
-<msg time="2025-02-26T10:39:16.698069" level="INFO">${username_element} = login-username</msg>
+<msg time="2025-02-27T12:58:01.762775" level="INFO">${username_element} = login-username</msg>
 <var>${username_element}</var>
 <arg>username_field</arg>
-<status status="PASS" start="2025-02-26T10:39:16.697530" elapsed="0.000539"/>
+<status status="PASS" start="2025-02-27T12:58:01.762775" elapsed="0.000000"/>
 </kw>
 <kw name="Get Login Element" owner="LoginPage">
-<msg time="2025-02-26T10:39:16.698069" level="INFO">${password_element} = login-password</msg>
+<msg time="2025-02-27T12:58:01.762775" level="INFO">${password_element} = login-password</msg>
 <var>${password_element}</var>
 <arg>password_field</arg>
-<status status="PASS" start="2025-02-26T10:39:16.698069" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:01.762775" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:16.698069" level="INFO">Typing text 'test' into text field 'id=login-username'.</msg>
+<msg time="2025-02-27T12:58:01.762775" level="INFO">Typing text 'test' into text field 'id=login-username'.</msg>
 <arg>id=${username_element}</arg>
 <arg>test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:16.698069" elapsed="0.051960"/>
+<status status="PASS" start="2025-02-27T12:58:01.762775" elapsed="0.075772"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:16.750029" level="INFO">Typing text 'test12344321' into text field 'id=login-password'.</msg>
+<msg time="2025-02-27T12:58:01.838547" level="INFO">Typing text 'test12344321' into text field 'id=login-password'.</msg>
 <arg>id=${password_element}</arg>
 <arg>test12344321</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:16.750029" elapsed="0.046363"/>
+<status status="PASS" start="2025-02-27T12:58:01.838547" elapsed="0.051164"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:16.796392" level="INFO">Clicking button 'Login'.</msg>
+<msg time="2025-02-27T12:58:01.889711" level="INFO">Clicking button 'Login'.</msg>
 <arg>Login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:16.796392" elapsed="0.050224"/>
+<status status="PASS" start="2025-02-27T12:58:01.889711" elapsed="0.049598"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:16.696399" elapsed="0.150217"/>
+<status status="PASS" start="2025-02-27T12:58:01.762775" elapsed="0.176534"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T10:39:19.846845" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-02-27T12:58:04.939712" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T10:39:16.846616" elapsed="3.000229"/>
+<status status="PASS" start="2025-02-27T12:58:01.939309" elapsed="3.001440"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:12.845797" elapsed="7.001048"/>
+<status status="PASS" start="2025-02-27T12:57:56.037692" elapsed="8.903057"/>
+</kw>
+<kw name="Given I want to buy weekend tickets for a family of four" owner="kim_keywords">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:04.941730" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
+<arg>title=Jura-Stina-Kalle Park</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.000000"/>
 </kw>
 <tag>kim-tickets</tag>
-<status status="PASS" start="2025-02-26T10:39:12.845797" elapsed="7.001048"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.000000"/>
 </kw>
 <kw name="When I add the tickets to my cart" owner="kim_keywords">
 <kw name="Buy 2 adult vip Tickets" owner="keywords" source_name="Buy ${amount} ${ticket_type} ${ticket_category} Tickets">
 <kw name="Get Ticket Element" owner="BuyTicketsPage">
-<msg time="2025-02-26T10:39:19.846845" level="INFO">${ticket_type} = #ticket-type &gt; option:nth-child(1)</msg>
+<msg time="2025-02-27T12:58:04.941730" level="INFO">${ticket_type} = #ticket-type &gt; option:nth-child(1)</msg>
 <var>${ticket_type}</var>
 <arg>${ticket_type}</arg>
-<status status="PASS" start="2025-02-26T10:39:19.846845" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.000000"/>
 </kw>
 <kw name="Get Ticket Element" owner="BuyTicketsPage">
-<msg time="2025-02-26T10:39:19.846845" level="INFO">${ticket_category} = #ticket-category &gt; option:nth-child(2)</msg>
+<msg time="2025-02-27T12:58:04.941730" level="INFO">${ticket_category} = #ticket-category &gt; option:nth-child(2)</msg>
 <var>${ticket_category}</var>
 <arg>${ticket_category}</arg>
-<status status="PASS" start="2025-02-26T10:39:19.846845" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.000000"/>
 </kw>
 <kw name="Get Page Link" owner="BasePage">
-<msg time="2025-02-26T10:39:19.846845" level="INFO">${ticket_link} = tickets-nav</msg>
+<msg time="2025-02-27T12:58:04.941730" level="INFO">${ticket_link} = tickets-nav</msg>
 <var>${ticket_link}</var>
 <arg>buy_tickets</arg>
-<status status="PASS" start="2025-02-26T10:39:19.846845" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.000000"/>
 </kw>
 <kw name="Get Ticket Element" owner="BuyTicketsPage">
-<msg time="2025-02-26T10:39:19.846845" level="INFO">${amount_input} = ticket-quantity</msg>
+<msg time="2025-02-27T12:58:04.941730" level="INFO">${amount_input} = ticket-quantity</msg>
 <var>${amount_input}</var>
 <arg>amount</arg>
-<status status="PASS" start="2025-02-26T10:39:19.846845" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.000000"/>
 </kw>
 <kw name="Click Section" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:19.846845" level="INFO">Clicking element 'id=tickets-nav'.</msg>
+<msg time="2025-02-27T12:58:04.941730" level="INFO">Clicking element 'id=tickets-nav'.</msg>
 <arg>id=${section_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:19.846845" elapsed="0.050312"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.052303"/>
 </kw>
 <arg>${ticket_link}</arg>
-<status status="PASS" start="2025-02-26T10:39:19.846845" elapsed="0.050312"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.052303"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:19.897534" level="INFO">Clicking element 'css:#ticket-type &gt; option:nth-child(1)'.</msg>
+<msg time="2025-02-27T12:58:04.995044" level="INFO">Clicking element 'css:#ticket-type &gt; option:nth-child(1)'.</msg>
 <arg>css:${ticket_type}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:19.897534" elapsed="0.020933"/>
+<status status="PASS" start="2025-02-27T12:58:04.994033" elapsed="0.035106"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:19.919480" level="INFO">Clicking element 'css:#ticket-category &gt; option:nth-child(2)'.</msg>
+<msg time="2025-02-27T12:58:05.029139" level="INFO">Clicking element 'css:#ticket-category &gt; option:nth-child(2)'.</msg>
 <arg>css:${ticket_category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:19.918467" elapsed="0.019244"/>
+<status status="PASS" start="2025-02-27T12:58:05.029139" elapsed="0.022968"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>id:${amount_input}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:19.937711" elapsed="0.023505"/>
+<status status="PASS" start="2025-02-27T12:58:05.052107" elapsed="0.035915"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:19.961216" level="INFO">Typing text '2' into text field 'id:ticket-quantity'.</msg>
+<msg time="2025-02-27T12:58:05.089102" level="INFO">Typing text '2' into text field 'id:ticket-quantity'.</msg>
 <arg>id:${amount_input}</arg>
 <arg>${amount}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:19.961216" elapsed="0.061572"/>
+<status status="PASS" start="2025-02-27T12:58:05.088563" elapsed="0.054843"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:20.022788" level="INFO">Clicking button 'Add to Cart'.</msg>
+<msg time="2025-02-27T12:58:05.144420" level="INFO">Clicking button 'Add to Cart'.</msg>
 <arg>Add to Cart</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.022788" elapsed="0.057099"/>
+<status status="PASS" start="2025-02-27T12:58:05.143406" elapsed="0.062971"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:19.846845" elapsed="0.233042"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.264647"/>
 </kw>
 <kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:20.079887" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-02-27T12:58:05.206377" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
 <doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.079887" elapsed="0.004001"/>
+<status status="PASS" start="2025-02-27T12:58:05.206377" elapsed="0.006114"/>
 </kw>
 <kw name="Buy 2 child vip Tickets" owner="keywords" source_name="Buy ${amount} ${ticket_type} ${ticket_category} Tickets">
 <kw name="Get Ticket Element" owner="BuyTicketsPage">
-<msg time="2025-02-26T10:39:20.084885" level="INFO">${ticket_type} = #ticket-type &gt; option:nth-child(2)</msg>
+<msg time="2025-02-27T12:58:05.213501" level="INFO">${ticket_type} = #ticket-type &gt; option:nth-child(2)</msg>
 <var>${ticket_type}</var>
 <arg>${ticket_type}</arg>
-<status status="PASS" start="2025-02-26T10:39:20.083888" elapsed="0.001299"/>
+<status status="PASS" start="2025-02-27T12:58:05.212491" elapsed="0.001010"/>
 </kw>
 <kw name="Get Ticket Element" owner="BuyTicketsPage">
-<msg time="2025-02-26T10:39:20.085693" level="INFO">${ticket_category} = #ticket-category &gt; option:nth-child(2)</msg>
+<msg time="2025-02-27T12:58:05.213501" level="INFO">${ticket_category} = #ticket-category &gt; option:nth-child(2)</msg>
 <var>${ticket_category}</var>
 <arg>${ticket_category}</arg>
-<status status="PASS" start="2025-02-26T10:39:20.085693" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:05.213501" elapsed="0.000997"/>
 </kw>
 <kw name="Get Page Link" owner="BasePage">
-<msg time="2025-02-26T10:39:20.086703" level="INFO">${ticket_link} = tickets-nav</msg>
+<msg time="2025-02-27T12:58:05.215498" level="INFO">${ticket_link} = tickets-nav</msg>
 <var>${ticket_link}</var>
 <arg>buy_tickets</arg>
-<status status="PASS" start="2025-02-26T10:39:20.086703" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:05.214498" elapsed="0.001000"/>
 </kw>
 <kw name="Get Ticket Element" owner="BuyTicketsPage">
-<msg time="2025-02-26T10:39:20.086703" level="INFO">${amount_input} = ticket-quantity</msg>
+<msg time="2025-02-27T12:58:05.216498" level="INFO">${amount_input} = ticket-quantity</msg>
 <var>${amount_input}</var>
 <arg>amount</arg>
-<status status="PASS" start="2025-02-26T10:39:20.086703" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:05.215498" elapsed="0.001000"/>
 </kw>
 <kw name="Click Section" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:20.087958" level="INFO">Clicking element 'id=tickets-nav'.</msg>
+<msg time="2025-02-27T12:58:05.217498" level="INFO">Clicking element 'id=tickets-nav'.</msg>
 <arg>id=${section_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.087958" elapsed="0.063573"/>
+<status status="PASS" start="2025-02-27T12:58:05.217498" elapsed="0.064116"/>
 </kw>
 <arg>${ticket_link}</arg>
-<status status="PASS" start="2025-02-26T10:39:20.087958" elapsed="0.063573"/>
+<status status="PASS" start="2025-02-27T12:58:05.216498" elapsed="0.065116"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:20.151531" level="INFO">Clicking element 'css:#ticket-type &gt; option:nth-child(2)'.</msg>
+<msg time="2025-02-27T12:58:05.281614" level="INFO">Clicking element 'css:#ticket-type &gt; option:nth-child(2)'.</msg>
 <arg>css:${ticket_type}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.151531" elapsed="0.018400"/>
+<status status="PASS" start="2025-02-27T12:58:05.281614" elapsed="0.019633"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:20.170942" level="INFO">Clicking element 'css:#ticket-category &gt; option:nth-child(2)'.</msg>
+<msg time="2025-02-27T12:58:05.302260" level="INFO">Clicking element 'css:#ticket-category &gt; option:nth-child(2)'.</msg>
 <arg>css:${ticket_category}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.170942" elapsed="0.015105"/>
+<status status="PASS" start="2025-02-27T12:58:05.301247" elapsed="0.016012"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>id:${amount_input}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.186047" elapsed="0.020262"/>
+<status status="PASS" start="2025-02-27T12:58:05.318261" elapsed="0.027517"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:20.207306" level="INFO">Typing text '2' into text field 'id:ticket-quantity'.</msg>
+<msg time="2025-02-27T12:58:05.346794" level="INFO">Typing text '2' into text field 'id:ticket-quantity'.</msg>
 <arg>id:${amount_input}</arg>
 <arg>${amount}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.206309" elapsed="0.040130"/>
+<status status="PASS" start="2025-02-27T12:58:05.345778" elapsed="0.045376"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:20.246439" level="INFO">Clicking button 'Add to Cart'.</msg>
+<msg time="2025-02-27T12:58:05.391652" level="INFO">Clicking button 'Add to Cart'.</msg>
 <arg>Add to Cart</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.246439" elapsed="0.069762"/>
+<status status="PASS" start="2025-02-27T12:58:05.391154" elapsed="0.045147"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:20.083888" elapsed="0.232313"/>
+<status status="PASS" start="2025-02-27T12:58:05.212491" elapsed="0.224811"/>
 </kw>
 <tag>kim-tickets</tag>
-<status status="PASS" start="2025-02-26T10:39:19.846845" elapsed="0.469356"/>
+<status status="PASS" start="2025-02-27T12:58:04.941730" elapsed="0.495572"/>
 </kw>
 <kw name="Then I should get confirmation that the tickets are added to cart" owner="kim_keywords">
 <kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:20.316201" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg time="2025-02-26T10:39:20.327959" level="INFO">${message} = Item added to cart!</msg>
+<msg time="2025-02-27T12:58:05.439304" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-02-27T12:58:05.444825" level="INFO">${message} = Item added to cart!</msg>
 <var>${message}</var>
 <doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.316201" elapsed="0.011758"/>
+<status status="PASS" start="2025-02-27T12:58:05.439304" elapsed="0.006518"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${message}</arg>
 <arg>Item added to cart!</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.327959" elapsed="0.001011"/>
+<status status="PASS" start="2025-02-27T12:58:05.445822" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:20.316201" elapsed="0.012769"/>
+<status status="PASS" start="2025-02-27T12:58:05.438301" elapsed="0.007521"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:12.845797" elapsed="7.485382"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-27T12:58:05.446821" elapsed="2.159109"/>
+</kw>
+<status status="PASS" start="2025-02-27T12:57:56.035693" elapsed="11.570237"/>
 </test>
-<test id="s1-s1-s1-s1-t2" name="Buying Safari Tickets For The Family" line="12">
-<kw name="Given I want to buy weekend safari tickets for a family of four" owner="kim_keywords">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T10:39:21.335188" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T10:39:20.334453" elapsed="1.000735"/>
+<test id="s1-s1-s1-t2" name="Buying Safari Tickets For The Family" line="14">
+<kw name="Setup Browser For Use" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:07.605930" level="INFO">Opening browser 'headlesschrome' to base url 'file://C:\Users\maxygd\Documents\DevOps-Test\azure-devops-testing/website/jurap.html'.</msg>
+<arg>url=${HTML_PATH}</arg>
+<arg>browser=headlesschrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-27T12:58:07.605930" elapsed="1.574044"/>
 </kw>
-<tag>kim-safari</tag>
-<status status="PASS" start="2025-02-26T10:39:20.332848" elapsed="1.002340"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-27T12:58:09.180974" elapsed="0.022244"/>
 </kw>
-<kw name="And I have added vip entry tickets to my cart" owner="kim_keywords">
-<kw name="Go To Cart" owner="keywords">
+<kw name="Register User" owner="keywords">
 <kw name="Get Page Link" owner="BasePage">
-<msg time="2025-02-26T10:39:21.335188" level="INFO">${cart_page} = cart-nav</msg>
-<var>${cart_page}</var>
-<arg>cart</arg>
-<status status="PASS" start="2025-02-26T10:39:21.335188" elapsed="0.000000"/>
+<msg time="2025-02-27T12:58:09.205216" level="INFO">${register_link} = register-nav</msg>
+<var>${register_link}</var>
+<arg>register</arg>
+<status status="PASS" start="2025-02-27T12:58:09.204216" elapsed="0.001000"/>
 </kw>
 <kw name="Click Section" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:21.335188" level="INFO">Clicking element 'id=cart-nav'.</msg>
+<msg time="2025-02-27T12:58:09.207216" level="INFO">Clicking element 'id=register-nav'.</msg>
 <arg>id=${section_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:21.335188" elapsed="0.050067"/>
+<status status="PASS" start="2025-02-27T12:58:09.206217" elapsed="0.065581"/>
 </kw>
-<arg>${cart_page}</arg>
-<status status="PASS" start="2025-02-26T10:39:21.335188" elapsed="0.050067"/>
+<arg>${register_link}</arg>
+<status status="PASS" start="2025-02-27T12:58:09.206217" elapsed="0.065581"/>
+</kw>
+<kw name="Register Credentials" owner="keywords">
+<kw name="Get Register Element" owner="RegisterPage">
+<msg time="2025-02-27T12:58:09.273420" level="INFO">${username_element} = reg-username</msg>
+<var>${username_element}</var>
+<arg>username_field</arg>
+<status status="PASS" start="2025-02-27T12:58:09.272367" elapsed="0.001053"/>
+</kw>
+<kw name="Get Register Element" owner="RegisterPage">
+<msg time="2025-02-27T12:58:09.274420" level="INFO">${password_element} = reg-password</msg>
+<var>${password_element}</var>
+<arg>password_field</arg>
+<status status="PASS" start="2025-02-27T12:58:09.273420" elapsed="0.001000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:09.275418" level="INFO">Typing text 'test' into text field 'id=reg-username'.</msg>
+<arg>id=${username_element}</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:09.274420" elapsed="0.095741"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:09.371147" level="INFO">Typing text 'test12344321' into text field 'id=reg-password'.</msg>
+<arg>id=${password_element}</arg>
+<arg>test12344321</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:09.371147" elapsed="0.062383"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:09.434532" level="INFO">Clicking button 'Register'.</msg>
+<arg>Register</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:09.434532" elapsed="0.095730"/>
+</kw>
+<status status="PASS" start="2025-02-27T12:58:09.272367" elapsed="0.257895"/>
+</kw>
+<status status="PASS" start="2025-02-27T12:58:09.203218" elapsed="0.327590"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T10:39:23.385981" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-02-27T12:58:11.531870" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T10:39:21.385255" elapsed="2.000726"/>
+<status status="PASS" start="2025-02-27T12:58:09.530808" elapsed="2.001062"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:21.335188" elapsed="2.050793"/>
+<kw name="Login To Page" owner="keywords">
+<kw name="Get Login Element" owner="LoginPage">
+<msg time="2025-02-27T12:58:11.533876" level="INFO">${username_element} = login-username</msg>
+<var>${username_element}</var>
+<arg>username_field</arg>
+<status status="PASS" start="2025-02-27T12:58:11.532886" elapsed="0.000990"/>
+</kw>
+<kw name="Get Login Element" owner="LoginPage">
+<msg time="2025-02-27T12:58:11.534877" level="INFO">${password_element} = login-password</msg>
+<var>${password_element}</var>
+<arg>password_field</arg>
+<status status="PASS" start="2025-02-27T12:58:11.533876" elapsed="0.001001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:11.534877" level="INFO">Typing text 'test' into text field 'id=login-username'.</msg>
+<arg>id=${username_element}</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:11.534877" elapsed="0.053975"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:11.589853" level="INFO">Typing text 'test12344321' into text field 'id=login-password'.</msg>
+<arg>id=${password_element}</arg>
+<arg>test12344321</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:11.588852" elapsed="0.054889"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:11.644750" level="INFO">Clicking button 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:11.644750" elapsed="0.072766"/>
+</kw>
+<status status="PASS" start="2025-02-27T12:58:11.531870" elapsed="0.186161"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-27T12:58:14.718783" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-27T12:58:11.718031" elapsed="3.000752"/>
+</kw>
+<status status="PASS" start="2025-02-27T12:58:07.605930" elapsed="7.112853"/>
+</kw>
+<kw name="Given I want to buy weekend safari tickets for a family of four" owner="kim_keywords">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:14.725597" level="INFO">Page title is 'Jura-Stina-Kalle Park'.</msg>
+<arg>title=Jura-Stina-Kalle Park</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.720791" elapsed="0.004806"/>
+</kw>
+<tag>kim-safari</tag>
+<status status="PASS" start="2025-02-27T12:58:14.719792" elapsed="0.006814"/>
+</kw>
+<kw name="And I have added vip entry tickets to my cart" owner="kim_keywords">
+<kw name="Buy 2 adult vip Tickets" owner="keywords" source_name="Buy ${amount} ${ticket_type} ${ticket_category} Tickets">
+<kw name="Get Ticket Element" owner="BuyTicketsPage">
+<msg time="2025-02-27T12:58:14.730148" level="INFO">${ticket_type} = #ticket-type &gt; option:nth-child(1)</msg>
+<var>${ticket_type}</var>
+<arg>${ticket_type}</arg>
+<status status="PASS" start="2025-02-27T12:58:14.730148" elapsed="0.000000"/>
+</kw>
+<kw name="Get Ticket Element" owner="BuyTicketsPage">
+<msg time="2025-02-27T12:58:14.730148" level="INFO">${ticket_category} = #ticket-category &gt; option:nth-child(2)</msg>
+<var>${ticket_category}</var>
+<arg>${ticket_category}</arg>
+<status status="PASS" start="2025-02-27T12:58:14.730148" elapsed="0.000000"/>
+</kw>
+<kw name="Get Page Link" owner="BasePage">
+<msg time="2025-02-27T12:58:14.731142" level="INFO">${ticket_link} = tickets-nav</msg>
+<var>${ticket_link}</var>
+<arg>buy_tickets</arg>
+<status status="PASS" start="2025-02-27T12:58:14.731142" elapsed="0.000000"/>
+</kw>
+<kw name="Get Ticket Element" owner="BuyTicketsPage">
+<msg time="2025-02-27T12:58:14.731142" level="INFO">${amount_input} = ticket-quantity</msg>
+<var>${amount_input}</var>
+<arg>amount</arg>
+<status status="PASS" start="2025-02-27T12:58:14.731142" elapsed="0.000000"/>
+</kw>
+<kw name="Click Section" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:14.732842" level="INFO">Clicking element 'id=tickets-nav'.</msg>
+<arg>id=${section_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.732135" elapsed="0.044069"/>
+</kw>
+<arg>${ticket_link}</arg>
+<status status="PASS" start="2025-02-27T12:58:14.731142" elapsed="0.045062"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:14.777204" level="INFO">Clicking element 'css:#ticket-type &gt; option:nth-child(1)'.</msg>
+<arg>css:${ticket_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.777204" elapsed="0.024417"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:14.802622" level="INFO">Clicking element 'css:#ticket-category &gt; option:nth-child(2)'.</msg>
+<arg>css:${ticket_category}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.802622" elapsed="0.016997"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id:${amount_input}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.819619" elapsed="0.024409"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:14.845035" level="INFO">Typing text '2' into text field 'id:ticket-quantity'.</msg>
+<arg>id:${amount_input}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.845035" elapsed="0.064088"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:14.910124" level="INFO">Clicking button 'Add to Cart'.</msg>
+<arg>Add to Cart</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.909123" elapsed="0.066409"/>
+</kw>
+<status status="PASS" start="2025-02-27T12:58:14.729046" elapsed="0.246486"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:14.975532" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.975532" elapsed="0.003996"/>
+</kw>
+<kw name="Buy 2 child vip Tickets" owner="keywords" source_name="Buy ${amount} ${ticket_type} ${ticket_category} Tickets">
+<kw name="Get Ticket Element" owner="BuyTicketsPage">
+<msg time="2025-02-27T12:58:14.980528" level="INFO">${ticket_type} = #ticket-type &gt; option:nth-child(2)</msg>
+<var>${ticket_type}</var>
+<arg>${ticket_type}</arg>
+<status status="PASS" start="2025-02-27T12:58:14.980528" elapsed="0.000000"/>
+</kw>
+<kw name="Get Ticket Element" owner="BuyTicketsPage">
+<msg time="2025-02-27T12:58:14.981530" level="INFO">${ticket_category} = #ticket-category &gt; option:nth-child(2)</msg>
+<var>${ticket_category}</var>
+<arg>${ticket_category}</arg>
+<status status="PASS" start="2025-02-27T12:58:14.981530" elapsed="0.000000"/>
+</kw>
+<kw name="Get Page Link" owner="BasePage">
+<msg time="2025-02-27T12:58:14.981530" level="INFO">${ticket_link} = tickets-nav</msg>
+<var>${ticket_link}</var>
+<arg>buy_tickets</arg>
+<status status="PASS" start="2025-02-27T12:58:14.981530" elapsed="0.000000"/>
+</kw>
+<kw name="Get Ticket Element" owner="BuyTicketsPage">
+<msg time="2025-02-27T12:58:14.982528" level="INFO">${amount_input} = ticket-quantity</msg>
+<var>${amount_input}</var>
+<arg>amount</arg>
+<status status="PASS" start="2025-02-27T12:58:14.982528" elapsed="0.000000"/>
+</kw>
+<kw name="Click Section" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:14.984532" level="INFO">Clicking element 'id=tickets-nav'.</msg>
+<arg>id=${section_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:14.983530" elapsed="0.045676"/>
+</kw>
+<arg>${ticket_link}</arg>
+<status status="PASS" start="2025-02-27T12:58:14.983530" elapsed="0.045676"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:15.030215" level="INFO">Clicking element 'css:#ticket-type &gt; option:nth-child(2)'.</msg>
+<arg>css:${ticket_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:15.029206" elapsed="0.018008"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:15.048221" level="INFO">Clicking element 'css:#ticket-category &gt; option:nth-child(2)'.</msg>
+<arg>css:${ticket_category}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:15.048221" elapsed="0.015514"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id:${amount_input}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:15.063735" elapsed="0.022600"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:15.086335" level="INFO">Typing text '2' into text field 'id:ticket-quantity'.</msg>
+<arg>id:${amount_input}</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:15.086335" elapsed="0.046787"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:15.133122" level="INFO">Clicking button 'Add to Cart'.</msg>
+<arg>Add to Cart</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:15.133122" elapsed="0.050219"/>
+</kw>
+<status status="PASS" start="2025-02-27T12:58:14.980528" elapsed="0.202813"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:15.183341" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-02-27T12:58:15.183341" elapsed="0.005005"/>
+</kw>
+<kw name="Go To Cart" owner="keywords">
+<kw name="Get Page Link" owner="BasePage">
+<msg time="2025-02-27T12:58:15.189343" level="INFO">${cart_page} = cart-nav</msg>
+<var>${cart_page}</var>
+<arg>cart</arg>
+<status status="PASS" start="2025-02-27T12:58:15.189343" elapsed="0.001004"/>
+</kw>
+<kw name="Click Section" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-27T12:58:15.191343" level="INFO">Clicking element 'id=cart-nav'.</msg>
+<arg>id=${section_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T12:58:15.190347" elapsed="0.045179"/>
+</kw>
+<arg>${cart_page}</arg>
+<status status="PASS" start="2025-02-27T12:58:15.190347" elapsed="0.045179"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-27T12:58:17.237031" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-27T12:58:15.235526" elapsed="2.001505"/>
+</kw>
+<status status="PASS" start="2025-02-27T12:58:15.188346" elapsed="2.048685"/>
 </kw>
 <kw name="Get Cart Total" owner="keywords">
 <kw name="Get Cart Element" owner="CartPage">
-<msg time="2025-02-26T10:39:23.385981" level="INFO">${cart_total} = id:cart-total</msg>
+<msg time="2025-02-27T12:58:17.238037" level="INFO">${cart_total} = id:cart-total</msg>
 <var>${cart_total}</var>
 <arg>total_price</arg>
-<status status="PASS" start="2025-02-26T10:39:23.385981" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:17.238037" elapsed="0.000000"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:23.395849" level="INFO">${text_cart_total} = Total: $320</msg>
+<msg time="2025-02-27T12:58:17.256368" level="INFO">${text_cart_total} = Total: $320</msg>
 <var>${text_cart_total}</var>
 <arg>${cart_total}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:23.385981" elapsed="0.009868"/>
+<status status="PASS" start="2025-02-27T12:58:17.238037" elapsed="0.018331"/>
 </kw>
 <kw name="Get Single Price" owner="CartPage">
-<msg time="2025-02-26T10:39:23.395849" level="INFO">${total_price} = 320</msg>
+<msg time="2025-02-27T12:58:17.257371" level="INFO">${total_price} = 320</msg>
 <var>${total_price}</var>
 <arg>${text_cart_total}</arg>
-<status status="PASS" start="2025-02-26T10:39:23.395849" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:17.256368" elapsed="0.001003"/>
 </kw>
 <return>
 <value>${total_price}</value>
-<status status="PASS" start="2025-02-26T10:39:23.395849" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:17.257371" elapsed="0.000000"/>
 </return>
-<msg time="2025-02-26T10:39:23.395849" level="INFO">${total_price} = 320</msg>
+<msg time="2025-02-27T12:58:17.257371" level="INFO">${total_price} = 320</msg>
 <var>${total_price}</var>
-<status status="PASS" start="2025-02-26T10:39:23.385981" elapsed="0.009868"/>
+<status status="PASS" start="2025-02-27T12:58:17.237031" elapsed="0.021336"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${total_price}</arg>
 <arg>${320}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-02-26T10:39:23.395849" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:17.258367" elapsed="0.000000"/>
 </kw>
 <tag>kim-safari</tag>
-<status status="PASS" start="2025-02-26T10:39:21.335188" elapsed="2.060661"/>
+<status status="PASS" start="2025-02-27T12:58:14.727602" elapsed="2.530765"/>
 </kw>
 <kw name="Then I should be able to buy weekend safari tickets" owner="kim_keywords">
 <kw name="Book weekend Safari" owner="keywords" source_name="Book ${daytype} Safari">
 <kw name="Get Page Link" owner="BasePage">
-<msg time="2025-02-26T10:39:23.408556" level="INFO">${safari_page} = safari-nav</msg>
+<msg time="2025-02-27T12:58:17.261368" level="INFO">${safari_page} = safari-nav</msg>
 <var>${safari_page}</var>
 <arg>book_safari</arg>
-<status status="PASS" start="2025-02-26T10:39:23.408556" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:17.261368" elapsed="0.000000"/>
 </kw>
 <kw name="Get Page Link" owner="BasePage">
-<msg time="2025-02-26T10:39:23.408556" level="INFO">${cart_page} = cart-nav</msg>
+<msg time="2025-02-27T12:58:17.261368" level="INFO">${cart_page} = cart-nav</msg>
 <var>${cart_page}</var>
 <arg>cart</arg>
-<status status="PASS" start="2025-02-26T10:39:23.408556" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:17.261368" elapsed="0.000000"/>
 </kw>
 <kw name="Get Safari Elements" owner="BookSafariPage">
-<msg time="2025-02-26T10:39:23.411042" level="INFO">${safari_date} = safari-date</msg>
+<msg time="2025-02-27T12:58:17.262371" level="INFO">${safari_date} = safari-date</msg>
 <var>${safari_date}</var>
 <arg>safari_date</arg>
-<status status="PASS" start="2025-02-26T10:39:23.411042" elapsed="0.000687"/>
+<status status="PASS" start="2025-02-27T12:58:17.262371" elapsed="0.000000"/>
 </kw>
 <kw name="Get Safari Elements" owner="BookSafariPage">
-<msg time="2025-02-26T10:39:23.411729" level="INFO">${safari_type} = #safari-type &gt; option:nth-child(3)</msg>
+<msg time="2025-02-27T12:58:17.263369" level="INFO">${safari_type} = #safari-type &gt; option:nth-child(3)</msg>
 <var>${safari_type}</var>
 <arg>safari_type</arg>
-<status status="PASS" start="2025-02-26T10:39:23.411729" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:17.262371" elapsed="0.000998"/>
 </kw>
-<kw name="Get Todays Date" owner="DateUtility">
-<msg time="2025-02-26T10:39:23.411729" level="INFO">${date_today} = 002025-02-26</msg>
-<var>${date_today}</var>
-<status status="PASS" start="2025-02-26T10:39:23.411729" elapsed="0.000000"/>
+<kw name="Get Date Type" owner="DateUtility">
+<msg time="2025-02-27T12:58:17.263369" level="INFO">${booking_date} = 002025-03-01</msg>
+<var>${booking_date}</var>
+<arg>${daytype}</arg>
+<status status="PASS" start="2025-02-27T12:58:17.263369" elapsed="0.000000"/>
 </kw>
 <kw name="Click Section" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:23.411729" level="INFO">Clicking element 'id=safari-nav'.</msg>
+<msg time="2025-02-27T12:58:17.264369" level="INFO">Clicking element 'id=safari-nav'.</msg>
 <arg>id=${section_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:23.411729" elapsed="0.056496"/>
+<status status="PASS" start="2025-02-27T12:58:17.264369" elapsed="0.093392"/>
 </kw>
 <arg>${safari_page}</arg>
-<status status="PASS" start="2025-02-26T10:39:23.411729" elapsed="0.056496"/>
+<status status="PASS" start="2025-02-27T12:58:17.263369" elapsed="0.094392"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T10:39:26.468746" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-02-27T12:58:20.359181" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T10:39:23.468225" elapsed="3.000521"/>
+<status status="PASS" start="2025-02-27T12:58:17.357761" elapsed="3.001937"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>id:${safari_date}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:26.468746" elapsed="0.025448"/>
+<status status="PASS" start="2025-02-27T12:58:20.359698" elapsed="0.031203"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:26.494194" level="INFO">Typing text '002025-02-26' into text field 'safari-date'.</msg>
+<msg time="2025-02-27T12:58:20.390901" level="INFO">Typing text '002025-03-01' into text field 'safari-date'.</msg>
 <arg>${safari_date}</arg>
-<arg>${date_today}</arg>
+<arg>${booking_date}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:26.494194" elapsed="0.051655"/>
+<status status="PASS" start="2025-02-27T12:58:20.390901" elapsed="0.078499"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:26.545849" level="INFO">Clicking element 'css:#safari-type &gt; option:nth-child(3)'.</msg>
+<msg time="2025-02-27T12:58:20.470572" level="INFO">Clicking element 'css:#safari-type &gt; option:nth-child(3)'.</msg>
 <arg>css:${safari_type}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:26.545849" elapsed="0.018681"/>
+<status status="PASS" start="2025-02-27T12:58:20.469400" elapsed="0.029021"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:26.564530" level="INFO">Clicking button 'css:#safari-form &gt; button'.</msg>
+<msg time="2025-02-27T12:58:20.498962" level="INFO">Clicking button 'css:#safari-form &gt; button'.</msg>
 <arg>css:#safari-form &gt; button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:26.564530" elapsed="0.050419"/>
+<status status="PASS" start="2025-02-27T12:58:20.498421" elapsed="0.085316"/>
 </kw>
 <kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:26.614949" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-02-27T12:58:20.584736" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
 <doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-02-26T10:39:26.614949" elapsed="0.004008"/>
+<status status="PASS" start="2025-02-27T12:58:20.583737" elapsed="0.007496"/>
 </kw>
 <kw name="Click Section" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:26.619957" level="INFO">Clicking element 'id=cart-nav'.</msg>
+<msg time="2025-02-27T12:58:20.592247" level="INFO">Clicking element 'id=cart-nav'.</msg>
 <arg>id=${section_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:26.619957" elapsed="0.026048"/>
+<status status="PASS" start="2025-02-27T12:58:20.592247" elapsed="0.061851"/>
 </kw>
 <arg>${cart_page}</arg>
-<status status="PASS" start="2025-02-26T10:39:26.619957" elapsed="0.026048"/>
+<status status="PASS" start="2025-02-27T12:58:20.591233" elapsed="0.062865"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:23.408556" elapsed="3.237449"/>
+<status status="PASS" start="2025-02-27T12:58:17.260369" elapsed="3.393729"/>
 </kw>
 <tag>kim-safari</tag>
-<status status="PASS" start="2025-02-26T10:39:23.408556" elapsed="3.237449"/>
+<status status="PASS" start="2025-02-27T12:58:17.259370" elapsed="3.394728"/>
 </kw>
 <kw name="And see the total price in my cart" owner="kim_keywords">
 <kw name="Go To Cart" owner="keywords">
 <kw name="Get Page Link" owner="BasePage">
-<msg time="2025-02-26T10:39:26.661035" level="INFO">${cart_page} = cart-nav</msg>
+<msg time="2025-02-27T12:58:20.660102" level="INFO">${cart_page} = cart-nav</msg>
 <var>${cart_page}</var>
 <arg>cart</arg>
-<status status="PASS" start="2025-02-26T10:39:26.661035" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:20.659109" elapsed="0.000993"/>
 </kw>
 <kw name="Click Section" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:26.663443" level="INFO">Clicking element 'id=cart-nav'.</msg>
+<msg time="2025-02-27T12:58:20.661108" level="INFO">Clicking element 'id=cart-nav'.</msg>
 <arg>id=${section_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:26.662393" elapsed="0.035269"/>
+<status status="PASS" start="2025-02-27T12:58:20.661108" elapsed="0.055000"/>
 </kw>
 <arg>${cart_page}</arg>
-<status status="PASS" start="2025-02-26T10:39:26.662393" elapsed="0.036269"/>
+<status status="PASS" start="2025-02-27T12:58:20.660102" elapsed="0.056006"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T10:39:28.698930" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-02-27T12:58:22.716522" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T10:39:26.698662" elapsed="2.000867"/>
+<status status="PASS" start="2025-02-27T12:58:20.716108" elapsed="2.000414"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:26.646005" elapsed="2.053524"/>
+<status status="PASS" start="2025-02-27T12:58:20.659109" elapsed="2.057956"/>
 </kw>
 <kw name="Get Cart Total" owner="keywords">
 <kw name="Get Cart Element" owner="CartPage">
-<msg time="2025-02-26T10:39:28.699529" level="INFO">${cart_total} = id:cart-total</msg>
+<msg time="2025-02-27T12:58:22.718119" level="INFO">${cart_total} = id:cart-total</msg>
 <var>${cart_total}</var>
 <arg>total_price</arg>
-<status status="PASS" start="2025-02-26T10:39:28.699529" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:22.717594" elapsed="0.001051"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T10:39:28.712202" level="INFO">${text_cart_total} = Total: $500</msg>
+<msg time="2025-02-27T12:58:22.732916" level="INFO">${text_cart_total} = Total: $500</msg>
 <var>${text_cart_total}</var>
 <arg>${cart_total}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T10:39:28.699529" elapsed="0.012673"/>
+<status status="PASS" start="2025-02-27T12:58:22.718645" elapsed="0.014809"/>
 </kw>
 <kw name="Get Single Price" owner="CartPage">
-<msg time="2025-02-26T10:39:28.712202" level="INFO">${total_price} = 500</msg>
+<msg time="2025-02-27T12:58:22.734003" level="INFO">${total_price} = 500</msg>
 <var>${total_price}</var>
 <arg>${text_cart_total}</arg>
-<status status="PASS" start="2025-02-26T10:39:28.712202" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:22.733454" elapsed="0.000549"/>
 </kw>
 <return>
 <value>${total_price}</value>
-<status status="PASS" start="2025-02-26T10:39:28.712202" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:22.734003" elapsed="0.001011"/>
 </return>
-<msg time="2025-02-26T10:39:28.712202" level="INFO">${total_price} = 500</msg>
+<msg time="2025-02-27T12:58:22.735014" level="INFO">${total_price} = 500</msg>
 <var>${total_price}</var>
-<status status="PASS" start="2025-02-26T10:39:28.699529" elapsed="0.012673"/>
+<status status="PASS" start="2025-02-27T12:58:22.717065" elapsed="0.017949"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${total_price}</arg>
 <arg>${500}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-02-26T10:39:28.712202" elapsed="0.000000"/>
+<status status="PASS" start="2025-02-27T12:58:22.735014" elapsed="0.001002"/>
 </kw>
 <tag>kim-safari</tag>
-<status status="PASS" start="2025-02-26T10:39:26.646005" elapsed="2.066197"/>
+<status status="PASS" start="2025-02-27T12:58:20.656104" elapsed="2.079912"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:20.332025" elapsed="8.380177"/>
-</test>
-<test id="s1-s1-s1-s1-t3" name="Tests Completed" line="18">
-<kw name="Close Browser" owner="SeleniumLibrary">
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-26T10:39:28.712202" elapsed="2.132717"/>
+<status status="PASS" start="2025-02-27T12:58:22.738011" elapsed="2.152282"/>
 </kw>
-<status status="PASS" start="2025-02-26T10:39:28.712202" elapsed="2.132717"/>
+<status status="PASS" start="2025-02-27T12:58:07.605930" elapsed="17.284363"/>
 </test>
-<status status="PASS" start="2025-02-26T10:39:12.596441" elapsed="18.248478"/>
+<status status="PASS" start="2025-02-27T12:57:55.675833" elapsed="29.216669"/>
 </suite>
-<status status="PASS" start="2025-02-26T10:39:12.596441" elapsed="18.248478"/>
+<status status="PASS" start="2025-02-27T12:57:55.671541" elapsed="29.222644"/>
 </suite>
-<status status="PASS" start="2025-02-26T10:39:12.596441" elapsed="18.248478"/>
-</suite>
-<status status="PASS" start="2025-02-26T10:39:12.586414" elapsed="18.258505"/>
+<status status="PASS" start="2025-02-27T12:57:55.644030" elapsed="29.251721"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Azure-Devops-Testing">Azure-Devops-Testing</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="New Tests">Azure-Devops-Testing.New Tests</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Tests">Azure-Devops-Testing.New Tests.Tests</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1-s1-s1" name="Kim">Azure-Devops-Testing.New Tests.Tests.Kim</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Azure-Devops-Testing">Azure-Devops-Testing</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Tests">Azure-Devops-Testing.Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Kim">Azure-Devops-Testing.Tests.Kim</stat>
 </suite>
 </statistics>
 <errors>

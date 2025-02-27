@@ -1,16 +1,20 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    ${EXECDIR}/new_tests/resources/page_object_models/BasePage.py
-Library    ${EXECDIR}/new_tests/resources/page_object_models/RegisterPage.py
-Library    ${EXECDIR}/new_tests/resources/page_object_models/LoginPage.py
-Library    ${EXECDIR}/new_tests/resources/page_object_models/BuyTicketsPage.py
-Library    ${EXECDIR}/new_tests/resources/page_object_models/BookSafariPage.py
-Library    ${EXECDIR}/new_tests/resources/page_object_models/CartPage.py
-Library    ${EXECDIR}/new_tests/resources/DateUtility.py
-Variables    ${EXECDIR}/new_tests/resources/variables.py
+Library    ${PAGE_OBJECT_PATH}/BasePage.py
+Library    ${PAGE_OBJECT_PATH}/RegisterPage.py
+Library    ${PAGE_OBJECT_PATH}/LoginPage.py
+Library    ${PAGE_OBJECT_PATH}/BuyTicketsPage.py
+Library    ${PAGE_OBJECT_PATH}/BookSafariPage.py
+Library    ${PAGE_OBJECT_PATH}/CartPage.py
+
+Library    ${RESOURCE_PATH}/DateUtility.py
 
 *** Variables ***
 ${HTML_PATH}    file://${EXECDIR}/website/jurap.html
+${RESOURCE_PATH}    ${EXECDIR}/resources
+${PAGE_OBJECT_PATH}    ${RESOURCE_PATH}/page_object_models    
+
+
 
 
 *** Keywords ***

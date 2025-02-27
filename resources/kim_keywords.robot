@@ -1,12 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ${EXECDIR}/new_tests/resources/keywords.robot
+Resource    ${EXECDIR}/resources/keywords.robot
 
 *** Keywords *** 
 
 I want to buy weekend tickets for a family of four
     [Tags]    kim-tickets
-    Setup Browser For Use
+    Title Should Be    title=Jura-Stina-Kalle Park
 
 I add the tickets to my cart
     [Tags]    kim-tickets
@@ -26,10 +26,14 @@ I should see the total price on the cart page
 
 I want to buy weekend safari tickets for a family of four
     [Tags]    kim-safari
-    Sleep    1s
+    Title Should Be    title=Jura-Stina-Kalle Park
 
 I have added vip entry tickets to my cart
     [Tags]    kim-safari
+    Buy 2 adult vip Tickets
+    Handle Alert
+    Buy 2 child vip Tickets
+    Handle Alert
     Go To Cart
     ${total_price}=    Get Cart Total
     Should Be Equal    ${total_price}    ${320}
