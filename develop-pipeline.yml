@@ -5,10 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  # Install dependencies (Robot Framework, Selenium Library)
-  - script: |
-      pip install --upgrade robotframework-seleniumlibrary 
-    displayName: 'Install Robot Framework and dependencies'
+  - template: templates/install-dependencies.yaml
 
   # Scripts for running all tests in a file and to run tests based on test case name (integration testing)
   - script: |
