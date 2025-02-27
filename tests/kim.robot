@@ -7,7 +7,7 @@ Test Teardown    Close Browser
 *** Test Cases ***
 
 Buying Tickets For The Family
-    [Tags]    new-feature    
+    [Tags]    new-feature  
     Given I want to buy weekend tickets for a family of four
     When I add the tickets to my cart
     Then I should get confirmation that the tickets are added to cart

@@ -8,8 +8,7 @@ I want to buy weekend tickets for a family of four
     [Tags]    kim-tickets
     Title Should Be    title=Jura-Stina-Kalle Park
 
-I add the tickets to my cart
-    [Tags]    kim-tickets
+I add the tickets to my cart  
     Buy 2 adult vip Tickets
     Handle Alert
     Buy 2 child vip Tickets
@@ -40,7 +39,6 @@ I have added vip entry tickets to my cart
 
 
 I should be able to buy weekend safari tickets
-    [Tags]    kim-safari
     Book weekend Safari
 
 see the total price in my cart

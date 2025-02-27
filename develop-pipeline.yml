@@ -1,0 +1,33 @@
+trigger:
+  - develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  # Install dependencies (Robot Framework, Selenium Library)
+  - script: |
+      pip install --upgrade robotframework-seleniumlibrary 
+    displayName: 'Install Robot Framework and dependencies'
+
+  # Scripts (in order) for running all tests in a file, run tests based on name and run test based on pattern in tags
+  - script: |
+      robot --output results/logs/output_kim_test.xml --log results/logs/log_kim_test.html --report results/logs/report_kim_test.html tests/kim.robot
+    displayName: 'Run Kim Tests'
+
+  - script: |
+      robot --test "Buying Safari Tickets For The Family" --output results/logs/output_kim_test_safari.xml --log results/logs/log_kim_test_safari.html --report results/logs/report_kim_test_safari.html tests/kim.robot
+    displayName: 'Run Specific Kim Tests'
+
+  - script: |
+      robot --include tickets --output results/logs/output_kim_test.xml --log results/logs/log_kim_test.html --report results/logs/report_kim_test.html tests/kim.robot
+    displayName: 'Run Tests tagged with tickets'
+
+  # Publish the Robot Framework reports as pipeline artifacts.
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(System.DefaultWorkingDirectory)/results/logs/'
+      artifactName: 'robot-reports'
+    displayName: 'Publish Robot Framework Reports'
+
+
