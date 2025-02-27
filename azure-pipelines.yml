@@ -12,7 +12,7 @@ steps:
 
   # 2. Run the Robot Framework tests.
   - script: |
-      robot --output tests/output_kim_test.xml --log test_results/log_kim_test.html --report test_results/report_kim_test.html tests/kim.robot
+      robot --output results/logs/output_kim_test.xml --log results/logs/log_kim_test.html --report results/logs/report_kim_test.html tests/kim.robot
     displayName: 'Run Kim Tests'
 
   # 3. Publish the Robot Framework reports as pipeline artifacts.
