@@ -14,9 +14,6 @@ ${HTML_PATH}    file://${EXECDIR}/website/jurap.html
 ${RESOURCE_PATH}    ${EXECDIR}/resources
 ${PAGE_OBJECT_PATH}    ${RESOURCE_PATH}/page_object_models    
 
-
-
-
 *** Keywords ***
 Setup Browser For Use
     Open Browser    url=${HTML_PATH}    browser=headlesschrome    
