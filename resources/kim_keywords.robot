@@ -6,7 +6,6 @@ Resource    ${EXECDIR}/resources/keywords.robot
 
 I want to buy weekend tickets for a family of four
     [Tags]    kim-tickets
-    [Documentation]    Checks if the page has loaded correctly.
     Title Should Be    title=Jura-Stina-Kalle Park
 
 I add the tickets to my cart  
