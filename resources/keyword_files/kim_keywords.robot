@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ${EXECDIR}/resources/keywords.robot
+Resource    ${EXECDIR}/resources/keyword_files/keywords.robot
 
 *** Keywords *** 
 
