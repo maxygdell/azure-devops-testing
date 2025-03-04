@@ -6,7 +6,6 @@ Library    ${PAGE_OBJECT_PATH}/LoginPage.py
 Library    ${PAGE_OBJECT_PATH}/BuyTicketsPage.py
 Library    ${PAGE_OBJECT_PATH}/BookSafariPage.py
 Library    ${PAGE_OBJECT_PATH}/CartPage.py
-
 Library    ${RESOURCE_PATH}/util/DateUtility.py
 
 *** Variables ***
